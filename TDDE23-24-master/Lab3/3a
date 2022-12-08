@@ -1,0 +1,99 @@
+import math
+
+def new_board():
+    """return:a en tom dictionary"""
+    return {}
+
+def is_free(board, x, y):
+    """tittar igenom dictionary new_board om board är free"""
+    return not (x,y) in board
+
+
+
+def place_piece(board, x ,y, player):
+    """ tittar om board är tom, om lägger en piece
+        annars return False om det existerar
+    """
+    if is_free(board, x, y):
+        board[(x,y)] = player
+        return True
+    else:
+        return False
+
+def get_piece(board, x, y):
+    """Tittar om board har en tile, om inte return false"""
+    if not is_free(board, x, y):
+        return board[(x,y)]
+    else:
+        return False
+
+def remove_piece(board, x , y):
+    """Tittar först om tom, om inte tar bort dictionary
+        positioner x,y return true, annars false om tom
+    """
+    if not is_free(board, x, y):
+        del board[x,y]
+        return True
+    else:
+        return False
+
+
+
+def move_piece(board, x, y , x_new, y_new):
+    """Tittar om tile är is_free
+        Tittar vilket användare som är på tile
+        använder fuktion remove för att ta bort existerande
+        använder funktion place för att lägga nytt x,y värde och
+        använder samma spelare
+
+    """
+    if not is_free(board, x, y):
+        player = get_piece(board, x, y)
+        remove_piece(board, x, y)
+        place_piece(board, x_new, y_new, player)
+        return True
+    else:
+        return False
+
+def count(board, field, link, player):
+    count=0
+    for piece in board:
+        place = 0
+        if field == "row":
+            place = 1
+        if piece[place] == link and get_piece(board, i[0], i[1]) == player:
+            count += 1
+    return count
+
+
+def dist(x,y,x2,y2):
+    """Pytagoras sats"""
+    return math.sqrt(((x-y)**2)+((x2-y2)**2))
+
+def nearest_piece(board, x, y):
+    """Sätter nearest till 0,
+        och false om nummer ej finns
+        sätter piece func dist som räknar ut
+        värdet du sätter in till iterativt värde piece[0][2]
+        Om du sätter n_p till 0 om letar på samma ställe
+        annars är c_d n_d
+    """
+    nearest_piece = 0
+    closest_dist = False
+    for piece in board:
+        n_dist = dist(x, y, piece[0], piece[1])
+        if nearest_piece or closest_dist == 0:
+            nearest_piece = piece
+            closest_dist = n_dist
+            #checka om closest_dist är närmare än n_dist
+    return nearest_piece
+
+b = new_board()
+
+print(place_piece(b, 20,1, "player1"))
+print(place_piece(b, 30,2 ,"player2"))
+print(move_piece(b, 20,1, 20,2))
+print(get_piece(b, 20,2))
+print(nearest_piece(b, 20 ,3))
+print(count(b, "column" , 20,"player1"))
+print(is_free(b, 20 ,1))

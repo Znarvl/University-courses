@@ -1,0 +1,40 @@
+#map {
+    height:80%;
+}
+body {
+    background-color: #F5F5F5;
+}
+.row {
+    display:flex;
+    box-sizing: border-box;
+}
+.col {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+.radio {
+  background-color: #4CAF50; /* Green */
+}
+
+
+@media only screen and (max-width: 600px) {
+  #map {
+      height:40%
+
+  }
+  .row {
+     display: flex;
+     -webkit-flex-direction: column;
+     flex-direction: column;
+  }
+}
+
+body.night-mode{
+  background-color: rgb(10, 10, 10);
+  filter: invert(90%) hue-rotate(180deg);
+  }
+}
+body.day-mode{
+}

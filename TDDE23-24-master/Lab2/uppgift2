@@ -1,0 +1,22 @@
+
+#Funktion
+def pnr_nummer(n):
+    #Vikt array
+    vikt = [2, 1, 2 , 1 ,2 ,1 ,2 ,1 ,2]
+    summa = 0
+    # Loopar igenom 9 (i = 0 till 8) objekt i arrayn
+    for i in range(9):
+        #kombinerar pnr med vikt, gånger
+        temp = n[i]*vikt[i]
+        #Får ut tiotal siffran och ental siffran
+        summa = summa + temp // 10 + temp % 10
+        # Adderar ihopa och tar närmaste tiotal
+    tiotal = (summa + 9) // 10 * 10
+    #Kontroll på sista nummer i n
+    slutsiffra = tiotal - summa
+    #Om slutsiffra = sista siffra i n array true, annars false
+    return slutsiffra == n[9]
+
+
+
+print(pnr_nummer([9,6,0,3,2,5,3,3,1,0]))

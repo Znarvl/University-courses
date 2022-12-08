@@ -1,0 +1,38 @@
+"""
+k = n!/k!(n-k)! = n! / (n-k)!
+    tittar om k > 0
+    ger factorial n-1 & k-1 så itererar ner k då n! blir
+    return täljare n-k k gånger. Vilket ger nämnare n->k värdet
+    return 1,1 för den får ej vara minus eller 0
+    vi får ut hela n och hela k
+    Det vi får ut är hela n! och k! utan division
+"""
+
+def factorial(n,k):
+	k = min(k,n-k)
+	if k > 0:
+         (täljare, nämnare) = factorial(n-1, k-1)
+         return (täljare * n, nämnare * k)
+    #är ej itererbar return, måste returna ints
+	return (1,1)
+
+
+
+print(factorial(12,8))
+"""Vid stora nummer så går det ej, använda en till funktion som tar n och k
+    delar på n // k för att få heltalsdivision
+    vi gör detta då om det skulle vara ojämna nummer (9/4) så får vi ej massa decimaler
+    och kanske overflow
+"""
+def choose(n, k):
+    n1, k2 = factorial(n, k)
+    if n1 >= k2:
+        return n1 // k2
+    else:
+        return False
+
+
+
+
+
+print(choose(8,3))

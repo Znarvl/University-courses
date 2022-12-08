@@ -1,0 +1,156 @@
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'lab3.obj' failed
+"../lab3.asm", ERROR!   at line 331: [E0300] Symbol reset1 has already been defined
+		mov r2, #0
+
+"../lab3.asm", ERROR!   at line 346: [E0001] Undefined symbol
+		b MUX2
+
+"../lab3.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  MUX2
+
+Errors in Source - Assembler Aborted
+gmake: *** [lab3.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'lab3.obj' failed
+"../lab3.asm", ERROR!   at line 331: [E0300] Symbol reset1 has already been defined
+		mov r2, #0
+
+"../lab3.asm", ERROR!   at line 346: [E0001] Undefined symbol
+		b MUX2
+
+"../lab3.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  MUX2
+
+Errors in Source - Assembler Aborted
+gmake: *** [lab3.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+Finished building: ../lab3.asm
+ 
+Building target: lab3.out
+Invoking: ARM Linker
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --stack_size=512 --heap_size=0 -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" "./lab3.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab3.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+Finished building: ../lab3.asm
+ 
+Building target: lab3.out
+Invoking: ARM Linker
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --stack_size=512 --heap_size=0 -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" "./lab3.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab3.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+Finished building: ../lab3.asm
+ 
+Building target: lab3.out
+Invoking: ARM Linker
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --stack_size=512 --heap_size=0 -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" "./lab3.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab3.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+Finished building: ../lab3.asm
+ 
+Building target: lab3.out
+Invoking: ARM Linker
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --stack_size=512 --heap_size=0 -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" "./lab3.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab3.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab3 ****
+
+/sw/ti/ccs/6.1.3/ccsv6/utils/bin/gmake -k all 
+Building file: ../lab3.asm
+Invoking: ARM Compiler
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lab3.d"  "../lab3.asm"
+Finished building: ../lab3.asm
+ 
+Building target: lab3.out
+Invoking: ARM Linker
+"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"lab3.map" --stack_size=512 --heap_size=0 -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"/sw/ti/ccs/6.1.3/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="lab3_linkInfo.xml" --rom_model -o "lab3.out" "./lab3.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab3.out
+ 
+
+**** Build Finished ****

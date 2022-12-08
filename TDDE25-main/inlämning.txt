@@ -1,0 +1,16 @@
+Expansions
+
+Joseph
+* A* search for shortest path (2 points) 
+    algorithms.py, server.py
+* Grid search for closest node (2 points) 
+    algorithms.py, store.py, server.py
+Alex
+* Allowing users to login and register ('securely') (2 points)
+    server.py, index.html, index.js, index.css
+* Provide a browser icon for your web page (1 point)
+    index.html, index.js, index.css
+
+Simon
+* Choose mode of transportation (3 points)
+    store.py, server.py
