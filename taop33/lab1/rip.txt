@@ -1,0 +1,26 @@
+P1:
+1. 
+a)Målfunktion: 50
+Primal optimallösning: x1,x2,x3 = 10,0,10
+Dual optimallösning: x4,x5,x6 = 1,0,1/3
+Vilka variabler är basvariabler i optimallösningen?: 3,5,1
+
+b) 2 - 0*0 - 2*0 - 3*(1/3) = 1, värdet bör ökas
+
+c) Målfunktionsvärde: 54
+optimallösning: 2 0 14 4
+ändring av målfunktion: 4
+
+P2:
+a) alla utom x3 och x4
+
+b) 6 (fel?)
+
+c) Oklart
+
+d) oklart
+
+e) oklart
+
+f) oklart
+

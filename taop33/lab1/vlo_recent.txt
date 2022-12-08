@@ -1,0 +1,7 @@
+6
+/home/simja649/Documents/taop33/lab1/prob2.vlp
+/home/simja649/Documents/taop33/lab1/prob4.vlp
+/home/simja649/Documents/taop33/lab1/prob.vlp
+/home/simja649/Documents/taop33/lab1/probdual.vlp
+/home/simja649/Documents/taop33/lab1/prob1.vlp
+/home/simja649/Documents/taop33/lab1/lab1.vlp

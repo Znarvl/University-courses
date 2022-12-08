@@ -1,0 +1,43 @@
+Total cost: -2155.0
+Reduced costs:
+Link: (A1,A2): 	Red cost: 0.0
+Link: (A1,B1): 	Red cost: -30.0
+Link: (A2,A3): 	Red cost: 0.0
+Link: (A2,D1): 	Red cost: -3.0
+Link: (A3,A4): 	Red cost: 0.0
+Link: (A3,B4): 	Red cost: -30.0
+Link: (A3,C3): 	Red cost: -3.0
+Link: (A4,D): 	Red cost: 25.0
+Link: (A4,C): 	Red cost: 29.0
+Link: (A4,B): 	Red cost: 0.0
+Link: (A4,A): 	Red cost: 0.0
+Link: (B1,B2): 	Red cost: 0.0
+Link: (B1,C2): 	Red cost: 0.0
+Link: (B2,B3): 	Red cost: 0.0
+Link: (B2,D1): 	Red cost: 27.0
+Link: (B3,A4): 	Red cost: 30.0
+Link: (B3,B4): 	Red cost: 0.0
+Link: (B4,C4): 	Red cost: 27.0
+Link: (B4,D): 	Red cost: 53.0
+Link: (B4,C): 	Red cost: 57.0
+Link: (B4,B): 	Red cost: 0.0
+Link: (B4,A): 	Red cost: 54.0
+Link: (C1,B2): 	Red cost: 0.0
+Link: (C1,C2): 	Red cost: 0.0
+Link: (C2,B3): 	Red cost: 0.0
+Link: (C2,C3): 	Red cost: 27.0
+Link: (C3,C4): 	Red cost: 0.0
+Link: (C4,D): 	Red cost: 27.0
+Link: (C4,C): 	Red cost: 0.0
+Link: (C4,B): 	Red cost: 2.0
+Link: (C4,A): 	Red cost: 28.0
+Link: (D1,A3): 	Red cost: 3.0
+Link: (D1,C3): 	Red cost: 0.0
+Link: (D1,D2): 	Red cost: 0.0
+Link: (D2,B4): 	Red cost: -27.0
+Link: (D2,D): 	Red cost: 0.0
+Link: (D2,C): 	Red cost: 29.0
+Link: (D2,B): 	Red cost: 0.0
+Link: (D2,A): 	Red cost: 26.0
+
+

@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\znarv\Desktop\tdddc17\task1\lab1_workspace\.metadata\.plugins\org.eclipse.jdt.core
+3867853513.index
+4211767635.index
+3581163120.index
+2196199803.index

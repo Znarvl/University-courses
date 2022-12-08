@@ -1,0 +1,123 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Level1.gd" type="Script" id=2]
+[ext_resource path="res://Assets/PressurePlate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UIcomponents/Pause.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Door.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CubeMesh" id=13]
+
+[sub_resource type="BoxShape" id=14]
+
+[sub_resource type="CubeMesh" id=15]
+
+[sub_resource type="BoxShape" id=16]
+
+[sub_resource type="CubeMesh" id=17]
+
+[sub_resource type="BoxShape" id=18]
+
+[sub_resource type="BoxShape" id=19]
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.497367, 2, 1 )
+
+[node name="Level1" type="Node"]
+script = ExtResource( 2 )
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Ground" type="StaticBody" parent="World"]
+transform = Transform( 15, 0, 0, 0, 80, 0, 0, 0, 40, 25, -80, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Ground"]
+mesh = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Ground"]
+shape = SubResource( 14 )
+
+[node name="Wall1" type="StaticBody" parent="World"]
+transform = Transform( 140, 0, 0, 0, 160, 0, 0, 0, 40, -130, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall1"]
+mesh = SubResource( 15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall1"]
+shape = SubResource( 16 )
+
+[node name="Wall2" type="StaticBody" parent="World"]
+transform = Transform( 20, 0, 0, 0, 40, 0, 0, 0, 16.2641, 2, 0, -23.7966 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall2"]
+mesh = SubResource( 17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall2"]
+shape = SubResource( 18 )
+
+[node name="Wall3" type="StaticBody" parent="World"]
+transform = Transform( 6, 0, 0, 0, 20, 0, 0, 0, 16.2641, 34, 20, -23.7966 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall3"]
+mesh = SubResource( 17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall3"]
+shape = SubResource( 19 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="World"]
+transform = Transform( 0.536688, -0.674551, -0.506899, 0.824175, 0.290332, 0.486253, -0.180834, -0.67874, 0.711766, 59.4377, 10.3655, 48.3971 )
+light_color = Color( 0.368627, 0.298039, 0.658824, 1 )
+light_energy = 4.303
+shadow_enabled = true
+shadow_color = Color( 0.298039, 0.247059, 0.34902, 1 )
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="World"]
+transform = Transform( 0.705439, -2.10237e-08, 0.708771, -0.644631, 0.415694, 0.6416, -0.294631, -0.909505, 0.293246, 44.9233, 0, 51.1372 )
+light_color = Color( 0.560784, 0.188235, 0.772549, 1 )
+light_energy = 1.294
+
+[node name="FinishLight" type="OmniLight" parent="World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9984, 8.14704, -16.739 )
+light_color = Color( 1, 0.592157, 0.117647, 1 )
+light_energy = 3.862
+shadow_enabled = true
+omni_range = 19.009
+
+[node name="Label" type="Label" parent="World"]
+margin_left = 272.0
+margin_top = 528.0
+margin_right = 758.0
+margin_bottom = 549.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Press E or Q to begin recording movement, press again to replay movement"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3858, 1.03394, 23.0017 )
+
+[node name="LevelLogic" type="Node" parent="."]
+
+[node name="PressurePlate" parent="LevelLogic" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6762, 0.0163376, 12.249 )
+
+[node name="Button" parent="LevelLogic" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0806, 2.44425, 0 )
+
+[node name="Door" parent="LevelLogic" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 24.6265, -0.0462889, -10.364 )
+
+[node name="LevelCompleteArea" type="Area" parent="LevelLogic"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 25.5875, 1.91708, -11 )
+
+[node name="LevelCompleteCollision" type="CollisionShape" parent="LevelLogic/LevelCompleteArea"]
+shape = SubResource( 12 )
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource( 5 )]
+
+[connection signal="pressed" from="LevelLogic/PressurePlate" to="." method="_on_PressurePlate_pressed"]
+[connection signal="unpressed" from="LevelLogic/PressurePlate" to="." method="_on_PressurePlate_unpressed"]
+[connection signal="crushed" from="LevelLogic/Door" to="." method="_on_Door_crushed"]
+[connection signal="body_entered" from="LevelLogic/LevelCompleteArea" to="." method="_on_LevelCompleteArea_body_entered"]
+[connection signal="retry" from="HUD/PauseMenu" to="." method="_on_PauseMenu_retry"]

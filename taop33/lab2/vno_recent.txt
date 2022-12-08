@@ -1,0 +1,5 @@
+4
+/home/gusha433/git_project/taop33/lab2/uppgift_b.net
+/home/gusha433/git_project/taop33/lab2/uppgift_c.net
+/home/gusha433/git_project/taop33/lab2/uppgift_a.net
+/home/simja649/Documents/taop33/lab2/uppgift1.net

@@ -1,0 +1,487 @@
+---
+title: "Lab 1 TDAB01"
+author: "Simon Jakobsson (simja649) and Erik Halvarsson (eriha353)"
+date: '2020-09-29'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Uppgift 3.1.1 Simulering av normalfördelning
+### (1)
+
+```{r, fig.width=3, fig.height=3}  
+N1 <- rnorm(100, mean = 10, sd = 4)
+hist(N1, probability = TRUE)
+xfit <- seq(0, 20, 1)   
+yfit <- dnorm(xfit, mean=10 , sd = 4) 
+lines(xfit, yfit, col="blue", lwd=2) 
+
+N2 <- rnorm(n = 10000, mean = 10, sd = 4)
+hist(N2, probability = TRUE)
+xfit <- seq(-5, 25, 1)   
+yfit <- dnorm(xfit, mean= 10, sd = 4) 
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+### (2)
+Skillanden är då att den ena har en sample på 100 dragningar medans den andra har på 10000
+Detta gör då den med 10 har slumpen mer roll jämfört med 10000 dragningar där 
+Normalfördellingen följer bättre "bell curve".
+
+
+## Uppgift 3.1.2 Simulera och visualisera andra fördelningar
+### Diskreta fördelningar
+```{r, fig.width=3, fig.height=3}
+## Bernoulli
+X.1 <- rbinom(n = 10000, size = 1, prob= 0.2)
+hist(X.1, probability = TRUE, breaks = 2)
+xfit <- seq(0, 1, 1)
+yfit <- dbinom(xfit, size= 1, prob= 0.2) 
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+``` {r, fig.width=3, fig.height=3}
+## Binomial X2
+
+X.2 <- rbinom(n = 10000, size = 20 , prob = 0.1)
+hist(X.2, probability = TRUE) 
+xfit <- seq(0, 10, 1)   
+yfit <- dbinom(xfit, size = 20, prob = 0.1) 
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+``` {r, fig.width=3, fig.height=3}
+## Binomial X3
+X.3 <- rbinom(n = 10000, size = 20 , prob = 0.5)
+hist(X.3, probability = TRUE) 
+xfit <- seq(0, 18, 1)   
+yfit <- dbinom(xfit, size = 20, prob = 0.5) 
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+``` {r, fig.width=3, fig.height=3}
+## Geometric X4
+X.4 <- rgeom(n = 10000, prob = 0.1)
+hist(X.4 , probability = TRUE) 
+xfit <- seq(0, 60, 1)   
+yfit <- dgeom(xfit, prob = 0.1) 
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+``` {r, fig.width=3, fig.height=3}
+## Poisson
+X.5 <- rpois(n = 100000, lambda = 10)
+hist(X.5 , probability = TRUE)
+xfit <- seq(0, 24,1)
+yfit <- dpois(xfit, lambda = 10)
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+### Kontinuerliga fördelningar
+
+```{r, fig.width=3, fig.height=3}
+## Uniform
+Y.1 <- runif(n = 10000, min = 0, max = 1)
+hist(Y.1, probability = TRUE)
+xfit <- seq(0, 1, 1)
+yfit <- dunif(xfit, min = 0, max = 1)
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+``` {r, fig.width=3, fig.height=3}
+## EXP
+Y.2 <- rexp(n = 10000, rate = 3)
+hist(Y.2, probability = TRUE)
+xfit <- seq(0,2,0.1)
+yfit <- dexp(xfit, rate = 3)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+``` {r, fig.width=3, fig.height=3}
+## Gamma
+Y.3 = rgamma(n = 10000, shape = 2, scale = 1)
+hist(Y.3, probability = TRUE)
+xfit <- seq(0,13,1)
+yfit <- dgamma(xfit, shape = 2, scale= 1)
+lines(xfit, yfit, col="blue", lwd=2) 
+```
+
+``` {r, fig.width=3, fig.height=3}
+##Student-t
+Y.4 = rt(n = 10000, df = 3, ncp = 0)
+hist(Y.4, probability = TRUE)
+xfit <- seq(-10,10,1)
+yfit <- dt(xfit, df = 3, ncp = 0)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+``` {r, fig.width=3, fig.height=3}
+## BETA Y5
+Y.5 <- rbeta(n = 10000, shape1 = 0.1, shape2 = 0.1, ncp = 0)
+hist(Y.5, probability = TRUE)
+xfit <- seq(0,1,0.001)
+yfit <- dbeta(xfit, shape1 = 0.1, shape2 = 0.1, ncp = 0)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+```{r, fig.width=3, fig.height=3}
+## BETA Y6
+Y.6 <- rbeta(n = 10000, shape1 = 1, shape2 = 1, ncp = 0)
+hist(Y.6, probability = TRUE)
+xfit <- seq(0,1,1)
+yfit <- dbeta(xfit, shape1 = 1, shape2 = 1, ncp = 0)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+``` {r, fig.width=3, fig.height=3}
+## BETA Y7
+Y.7 <- rbeta(n = 10000, shape1 = 10, shape2 = 5, ncp = 0)
+hist(Y.7, probability = TRUE)
+xfit <- seq(0,1,0.01)
+yfit <- dbeta(xfit, shape1 = 10, shape2 = 5, ncp = 0)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+
+## Uppgift 3.1.3 Relation mellan fördelningar
+### (1)
+X ~ Binomial(n = 10000, p = 0.001)
+```{r, fig.width=3, fig.height=3}
+## Bionomal 
+X <- rbinom(n = 1000, size = 10000, p = 0.001)
+hist(X, probability = TRUE)
+xfit <- seq(0,20,1)
+yfit <- dbinom(xfit, size = 10000, p = 0.001)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+
+Y ~ Student-t(v = 10000)
+``` {r, fig.width=3, fig.height=3}
+##Student t
+Y <- rt(n = 10000, df = 1000, ncp = 0)
+hist(Y, probability = TRUE)
+xfit <- seq(-4,4,0.01)
+yfit <- dt(xfit, df = 1000, ncp = 0)
+lines(xfit, yfit, col="blue", lwd=2)
+```
+### (2)
+
+
+Binomialen konvergerar mot Poisson och t-distributionen mot normaldistributionen under specifika förhållanden.
+
+
+### (3)
+``` {r, fig.width=3, fig.height=3}
+#Biominal konvergerar mot poisson
+Y <- rpois(10000, 10)
+hist(Y)
+```
+
+``` {r, fig.width=3, fig.height=3}
+# Student-t konvergerar mot normaldist.
+N <- rnorm(n=1000, mean = 0)
+hist(N)
+```
+
+## Uppgift 3.1.4 Analytisk sannolikhet och approximationer med Monte Carlo metoder.
+### (1)
+Rs täthetsfunktion ger:
+```{r}
+x <- dbinom(x=0, size=10, prob=0.1)
+```
+
+### (2)
+
+P(X < 0)
+```{r}
+pnorm(q=0, mean=0, sd=1, lower.tail=TRUE)
+```
+P(-1 < X < 1)
+``` {r}
+sum(pnorm(q=-1, mean=0, sd=1, lower.tail=FALSE)-pnorm(q=1, mean=0, sd=1, lower.tail=FALSE))
+```
+P(1.96 < X)
+``` {r}
+pnorm(q = 1.96, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE)
+```
+P(0 < Y < 10)
+``` {r}
+pbinom(0, size = 10,p= 0.1, lower.tail = FALSE) - pbinom(9, size = 10, p = 0.1, lower.tail = FALSE) 
+```
+P(Y = 0)
+``` {r}
+pbinom(0, size = 10, p=0.1, lower.tail = TRUE)
+```
+P(0 <= Y <= 10)
+``` {r}
+pbinom(10, size = 10,p= 0.1, lower.tail = TRUE) - pbinom(-1, size = 10, p = 0.1, lower.tail = TRUE)
+```
+
+### (3)
+P(X<0)
+``` {r}
+X <- function(){
+  return (rnorm(n = 10000, mean = 0, sd = 1))
+}
+
+Y <-function()
+{
+  return (rbinom(n=10000, size = 10, prob = 0.1))
+}
+
+X.1 <- X()
+sum(X.1 < 0) / 10000
+```
+
+P(-1 < X < 1)
+``` {r}
+X.2 <- X()
+sum((X.2 > -1) & (X.2 < 1)) / 10000
+```
+
+P(1.96 < X)
+``` {r}
+X.3 <- X()
+sum(X.3 > 1.96) / 10000
+```
+
+P(0 < Y < 10)
+```{r}
+Y.1 <- Y()
+sum((Y.1 > 0) & (Y.1 < 10)) / 10000
+```
+
+P(Y = 0)
+```{r}
+Y.2 <- Y()
+sum(Y.2==0) / 10000
+```
+
+P(0 <= Y <= 10)
+```{r}
+Y.3<-Y()
+sum((Y.3 >= 0) & (Y.3 <= 10)) / 10000
+```
+
+
+## Uppgift 3.1.5 Beräkna (icke-triviala) sannolikheter
+### Del 1
+``` {r, fig.width=3, fig.height=3}
+#gamla systemet
+oldsys <- (rbinom(n= 10000, size = 337, p = 0.1))
+sum(oldsys)/10000
+#nya systemet
+P <-sum(runif(n = 10000, min = 0.02, max = 0.16))/10000
+newsys <- rbinom(n = 10000, size = 337, p = P)
+sum(newsys)/10000
+```
+
+### Del 2
+```{r}
+sum(newsys < oldsys)/10000
+```
+
+### Del 3
+```{r}
+sum(oldsys > 50)/10000
+sum(newsys > 50)/10000
+```
+
+
+
+## Uppgift 3.2.1 Stora talens lag
+### (1)
+``` {r, fig.width=3, fig.height=3}
+X <- function(S){
+  return (mean(rbinom(n=S, size=10, prob=0.2)))
+}
+
+Y <- function(S){
+  return (mean(rgamma(n=S, shape=2, scale=2)))
+}
+
+
+X(10000) # stämmer ganska väl överens med E(X) = size*prob = 10000*0.2
+Y(10000) # stämmer ganska väl överens med E(Y) = alpha*beta = 2*2
+```
+
+### (2)
+``` {r, fig.width=3, fig.height=3}
+vector.list <- c(10, 20, 30 ,40, 50,60,70,80,90,100,200,300,400,500,600,700,800,900
+          ,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000)
+
+
+vectorizedMeanX <- Vectorize(X)
+vectorizedMeanY <- Vectorize(Y)
+vectorMeanX <- vectorizedMeanX(vector.list)
+vectorMeanY <- vectorizedMeanY(vector.list)
+plot(vectorMeanX, type='l')
+plot(vectorMeanY, type='l')
+```
+
+
+## Uppgift 3.3.1 Väntevärde och varians
+
+### (1)
+
+E[X] = 1 / theta = 1 / 10 = 0.1
+
+Var[X] = 1/theta^2 = 1 / 100 = 0.01
+
+E[Y] = Var[Y] = lambda = 3 
+
+
+### (2)
+``` {r, fig.width=3, fig.height=3}
+X <- rexp(n= 10000, rate = 10)
+mean(X)
+var(X)
+
+Y= rpois(n=10000, lambda = 3)
+mean(Y)
+var(Y)
+```
+
+### (3)
+
+E(3) = 3
+
+E(3*X+2) = 3E(X) + 2 = 3*0.1+2 = 0.3 + 2 = 2.3
+
+E(X + Y) = E(X) + E(Y) = 3 + 0.1 = 3.1
+
+E(X*Y) = E(X) * E(Y) = 0.1 * 3 = 0.3
+
+E(3*X+2*Y-3) = 3E(X) + 2E(Y) - 3 = 3*0.3 + 2*3 -3 = 3.3
+
+Var(2*X-5) = 2^2*Var(X) = 4*0.01 = 0.04
+
+Vi antar att X och Y är oberoende, i så fall får vi följande ekvation:
+
+Var(X+Y) = Var(X) + Var(Y) = 0.01 + 3 = 3.01
+
+### (4)
+``` {r, fig.width=3, fig.height=3}
+X <- rexp(n = 10000, rate = 10)
+Y <- rpois(n= 10000, lambda = 3)
+mean(3)
+mean(3*X+2)
+mean(X+Y)
+mean(3 * X + 2 * Y - 3)
+var(2*X-5)
+var(X+Y)
+```
+
+
+## Uppgift 3.4.1 Centrala gränsvärdessatsen
+### (1)
+``` {r, fig.width=3, fig.height=3}
+X<-rpois(n= 1000, lambda = 5)
+Y<- rexp(n= 1000, rate = 1)
+Z<-rbinom(n= 1000, size = 10, p=0.01)
+
+hist(X)
+hist(Y)
+hist(Z)
+```
+
+### (2)
+``` {r, fig.width=3, fig.height=3}
+AverageX<- vector()
+AverageY<-vector()
+X<-rpois(n= 1000, lambda = 5)
+for (i in 1:1000){
+  median <- sum(rpois(n= 10, lambda = 5))/ 10
+  AverageX <- append(AverageX, median)
+}
+hist(AverageX)
+
+for (i in 1:1000){
+  median <- sum(rexp(n= 10, rate = 5))/ 10
+  AverageY <- append(AverageY, median)
+}
+hist(AverageY)
+```
+
+### (3)
+``` {r, fig.width=3, fig.height=3}
+####
+#X##
+####
+AverageX30 <- vector()
+for (i in 1:1000){
+  median <- sum(rpois(n= 30, lambda = 5))/ 30
+  AverageX30 <- append(AverageX30, median)
+}
+hist(AverageX30)
+
+AverageX100 <- vector()
+for (i in 1:1000){
+  median <- sum(rpois(n= 100, lambda = 5))/ 100
+  AverageX100 <- append(AverageX100, median)
+}
+hist(AverageX100)
+
+AverageX1000 <- vector()
+for (i in 1:1000){
+  median <- sum(rpois(n= 1000, lambda = 5))/ 1000
+  AverageX1000 <- append(AverageX1000, median)
+}
+hist(AverageX1000)
+####
+#Y##
+####
+AverageY30 <- vector()
+for (i in 1:1000){
+  median <- sum(rexp(n= 30, rate = 5))/ 30
+  AverageY30 <- append(AverageY30, median)
+}
+hist(AverageY30)
+
+AverageY100 <- vector()
+for (i in 1:1000){
+  median <- sum(rexp(n= 100, rate = 5))/ 100
+  AverageY100 <- append(AverageY100, median)
+}
+hist(AverageY100)
+
+AverageY1000 <- vector()
+for (i in 1:1000){
+  median <- sum(rexp(n= 1000, rate = 5))/ 1000
+  AverageY1000 <- append(AverageY1000, median)
+}
+hist(AverageY1000)
+
+####
+#Z##
+####
+AverageZ30 <- vector()
+for (i in 1:1000){
+  median <- sum(rbinom(n= 30, size = 10, prob = 0.01))/ 30
+  AverageZ30 <- append(AverageZ30, median)
+}
+hist(AverageZ30)
+
+AverageZ100 <- vector()
+for (i in 1:1000){
+  median <- sum(rbinom(n= 100, size = 10, prob = 0.01))/ 100
+  AverageZ100 <- append(AverageZ100, median)
+}
+hist(AverageZ100)
+
+AverageZ1000 <- vector()
+for (i in 1:1000){
+  median <- sum(rbinom(n= 1000, size = 10, prob = 0.01))/ 1000
+  AverageZ1000 <- append(AverageZ1000, median)
+}
+hist(AverageZ1000)
+
+```
+
+Vi får på historiegramen X,Y och Z att de konvergerar mot en normalfördelning. Detta följer från Centrala Gränsvärdesssatsen.
+Utifrån vad vi ser på graferna så ser det ut som att Z går snabbast mot 
+normalförderlningen. Vi vet sedan tidigare att binomialfördelningen generellt 
+konvergerar mot normalfördelningen, och därför tycker vi att denna slutsats är rimlig.

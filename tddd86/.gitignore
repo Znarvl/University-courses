@@ -1,0 +1,6 @@
+# Don't track pro.user files
+labb1/life/Life.pro.user*
+labb2/evilhangman/EvilHangman.pro.user*
+labb2/wordchain/WordChain.pro.user*
+labb3/tiles/Tiles.pro.user*
+labb3/tsp/TSP.pro.user*

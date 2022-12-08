@@ -1,0 +1,43 @@
+Saved under name: uppgift1.
+
+Problem saved Wed Oct 06 20:04:22 CEST 2021 with 4 nodes and 10 links.
+
+Problem saved Wed Oct 06 20:04:22 CEST 2021 with 4 nodes and 10 links.
+
+Saved under name: grundnoder.
+
+Problem saved Sat Oct 09 11:23:44 CEST 2021 with 14 nodes and 0 links.
+
+Problem saved Sat Oct 09 11:23:44 CEST 2021 with 14 nodes and 0 links.
+Saved under name: grundnoder.
+
+Problem saved Sat Oct 09 11:25:19 CEST 2021 with 14 nodes and 0 links.
+
+Problem saved Sat Oct 09 11:25:19 CEST 2021 with 14 nodes and 0 links.
+Saved under name: tomnodlink.
+
+Problem saved Sat Oct 09 11:32:14 CEST 2021 with 14 nodes and 22 links.
+
+Problem saved Sat Oct 09 11:32:14 CEST 2021 with 14 nodes and 22 links.
+Saved under name: utankostnader.
+
+Problem saved Sat Oct 09 11:42:38 CEST 2021 with 14 nodes and 22 links.
+
+Problem saved Sat Oct 09 11:42:38 CEST 2021 with 14 nodes and 22 links.
+
+Problem saved Sat Oct 09 11:55:16 CEST 2021 with 14 nodes and 22 links.
+
+Problem saved Sat Oct 09 11:55:16 CEST 2021 with 14 nodes and 22 links.
+
+Saved under name: medkostnad.
+
+Problem saved Sat Oct 09 18:30:37 CEST 2021 with 18 nodes and 38 links.
+
+Problem saved Sat Oct 09 18:30:37 CEST 2021 with 18 nodes and 38 links.
+
+Saved under name: uppgift_a.
+
+Problem saved Sat Oct 09 20:24:50 CEST 2021 with 18 nodes and 38 links.
+
+Problem saved Sat Oct 09 20:24:50 CEST 2021 with 18 nodes and 38 links.
+

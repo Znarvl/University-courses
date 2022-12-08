@@ -1,0 +1,155 @@
+body {
+    background-color: #6998ce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    margin-top: 100px;
+    width: 600px;
+}
+
+/* WELCOME */
+
+/* Sub-Containers */
+
+img {
+    float: left;
+    width: 340px;
+    height: 400px;
+}
+
+.loginSignUp {
+    float: right;
+    width: 250px;
+    height: 400px;
+}
+
+/* Log In */
+
+.loginForm {
+    width: 250px;
+    height: 100px;
+    background-color: white;
+}
+
+.loginButton {
+    position: relative;
+    bottom: 0px;
+    right: 5px;
+}
+
+/* Sign Up */
+.signSign {
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.signUp {
+    margin-top: 10px;
+    width: 250px;
+    height: 290px;
+    background-color: white;
+    text-align: left;
+}
+
+.signUpButton {
+    position: relative;
+    bottom: 0px;
+    right: 5px;
+}
+
+/* Form formatting */
+
+input {
+    width: 125px;
+    float: right;
+}
+
+select {
+    width: 133px;
+    float: right;
+}
+
+form>div {
+    padding-top: 4px;
+    height: 20px;
+}
+
+/* Error and Success */
+/*#sign-up-error, #login-error{*/
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/* PROFILE */
+
+/* Tabs */
+
+.white {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px rgb(45, 69, 97);
+}
+
+.tab-container {
+    display: none;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.tab-container#home {}
+
+/* Tabrow and buttons */
+.tabrow {
+    width: 100%;
+}
+
+.wall {
+    border-style: solid;
+    border-color: green;
+    border-radius: 5px;
+}
+
+.wall-message {
+    font-size: large;
+    border-top: solid;
+}
+
+.wall-message>.writer {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.wall-message>.content {
+    padding: 10px;
+}
+
+.tab-button {
+    width: 197px;
+    transition: 0.5s;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.tab-button.current {
+    background-color: rgb(204, 204, 204);
+}

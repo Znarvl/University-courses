@@ -1,0 +1,236 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Levels/Level5.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/PressurePlate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/BoxPressurePlate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UIcomponents/Pause.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CubeMesh" id=10]
+
+[sub_resource type="BoxShape" id=11]
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1.05051, 1, 1 )
+
+[sub_resource type="CubeMesh" id=14]
+
+[sub_resource type="BoxShape" id=15]
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 2.05249, 4.71434, 1.42729 )
+
+[node name="Level5" type="Node"]
+script = ExtResource( 1 )
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Ground" type="StaticBody" parent="World"]
+transform = Transform( 0.388776, 0, 0, 0, 1, 0, 0, 0, 1, 22.2797, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Ground"]
+transform = Transform( 113.835, 0, 0, 0, 1, 0, 0, 0, 80, -11.6481, 0, 0 )
+mesh = SubResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Ground"]
+transform = Transform( 108.24, 0, 0, 0, 1, 0, 0, 0, 80, -7.63803, 0, 0 )
+shape = SubResource( 11 )
+
+[node name="Wall1" type="StaticBody" parent="World"]
+transform = Transform( 0.989913, 0, 0, 0, 1, 0, 0, 0, 3.51506, 23.5439, 16.9941, -66.3864 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall1"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall1"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall3" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, 12.5023, 16.9941, 42.0248 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall3"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -33.3497, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall3"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -34.994, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall6" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, -4.77576, 16.9941, 12.7444 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall6"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall6"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -1.8558, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall10" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, -4.77576, 16.9941, -16.2862 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall10"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall10"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -1.8558, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall4" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, 58.2452, 16.9941, 42.0248 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall4"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -33.8709, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall4"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -31.43, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall7" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, 59.1215, 16.9941, 12.0048 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall7"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -35.2411, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall7"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -33.3066, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall9" type="StaticBody" parent="World"]
+transform = Transform( 0.517017, 0, 0, 0, 1, 0, 0, 0, 3.51506, 59.1215, 16.9941, -15.8401 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall9"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -35.2411, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall9"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, -33.3066, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Wall2" type="StaticBody" parent="World"]
+transform = Transform( -9.61651e-08, 0, 2.2, 0, 1, 0, -1.36, 0, -5.94475e-08, -6, 16.9941, 24 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall2"]
+transform = Transform( 54.8994, 0, 1.62819e-08, 0, 16, 0, 6.51275e-07, 0, 1, 0.580299, 0, 0 )
+mesh = SubResource( 14 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall2"]
+transform = Transform( 57.5916, 0, 1.92238e-08, 0, 16, 0, 7.68951e-07, 0, 1, -2.09831, 0, -4.76837e-07 )
+shape = SubResource( 15 )
+
+[node name="Wall8" type="StaticBody" parent="World"]
+transform = Transform( -9.61651e-08, 0, 2.2, 0, 1, 0, -0.255125, 0, -1.11519e-08, 5.16326, 16.9941, 24 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall8"]
+transform = Transform( 40, 0, -3.55271e-15, 0, 16, 0, -2.27374e-13, 0, 1, 0, 0, 2.50368 )
+mesh = SubResource( 14 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall8"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 15 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="World"]
+transform = Transform( 0.797826, -0.350946, -0.490214, 0.602887, 0.464422, 0.648721, 0, -0.813111, 0.582109, 22.6294, 5.29881, 0 )
+light_color = Color( 0.368627, 0.298039, 0.658824, 1 )
+light_energy = 3.856
+shadow_enabled = true
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="World"]
+transform = Transform( 0.736754, 0.0403968, 0.674953, -0.539666, 0.636537, 0.550982, -0.407375, -0.770188, 0.490772, 22.6294, 5.29881, 11.4556 )
+light_color = Color( 0.560784, 0.188235, 0.772549, 1 )
+light_energy = 0.927
+shadow_color = Color( 0.560784, 0.188235, 0.772549, 1 )
+
+[node name="Wall5" type="StaticBody" parent="World"]
+transform = Transform( -1.15398e-07, 0, 2.64, 0, 1, 0, -0.597602, 0, -2.6122e-08, -6.39252, 16.9941, -79.6821 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall5"]
+transform = Transform( 40, 0, -7.10543e-15, 0, 16, 0, -2.27374e-13, 0, 1, 0, 0, 0 )
+mesh = SubResource( 14 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall5"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 15 )
+
+[node name="FinishLight" type="OmniLight" parent="World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2703, 4.90989, -52.5235 )
+light_color = Color( 1, 0.592157, 0.117647, 1 )
+light_energy = 3.862
+shadow_enabled = true
+omni_range = 19.009
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.997508, 0, -0.0705573, 0, 1, 0, 0.0705573, 0, 0.997508, 26.6333, 6.10478, 65.9924 )
+
+[node name="LevelLogic" type="Spatial" parent="."]
+
+[node name="Crate" parent="LevelLogic" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16002, 3.07414, 24.347 )
+
+[node name="Crate3" parent="LevelLogic" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5319, 3.07414, -44.1131 )
+
+[node name="ExitDoor" parent="LevelLogic" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60168, 0, -53.4737 )
+
+[node name="PressurePlate" parent="LevelLogic" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9098, 1.09896, 54.3843 )
+
+[node name="PressurePlate2" parent="LevelLogic" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0954, 1.09896, 20.1471 )
+
+[node name="PressurePlate3" parent="LevelLogic" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3148, 1.09896, -8.55452 )
+
+[node name="BoxPressurePlate" parent="LevelLogic" instance=ExtResource( 6 )]
+transform = Transform( 0.999993, 0, -0.00363028, 0, 1, 0, 0.00363028, 0, 0.999993, 6.33904, 1.56387, 52.6293 )
+
+[node name="BoxPressurePlate2" parent="LevelLogic" instance=ExtResource( 6 )]
+transform = Transform( 0.999993, 0, -0.00363028, 0, 1, 0, 0.00363028, 0, 0.999993, 46.463, 1.56387, 31.2299 )
+
+[node name="Door" parent="LevelLogic" groups=["doors"] instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.968, 1, 40.8662 )
+
+[node name="Door2" parent="LevelLogic" groups=["doors"] instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6852, 1, 36.3544 )
+
+[node name="Door3" parent="LevelLogic" groups=["doors"] instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9635, 1, 11.8414 )
+
+[node name="Door4" parent="LevelLogic" groups=["doors"] instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9635, 1, -14.5095 )
+
+[node name="LevelCompleteArea" type="Area" parent="LevelLogic"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4685, 7.4271, -51.0567 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="LevelLogic/LevelCompleteArea"]
+transform = Transform( 3.15075, 0, 0, 0, 1, 0, 0, 0, 2.66732, 0, -1.73611, -2.65783 )
+shape = SubResource( 16 )
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource( 7 )]
+
+[connection signal="pressed" from="LevelLogic/PressurePlate" to="." method="_on_PressurePlate_pressed"]
+[connection signal="unpressed" from="LevelLogic/PressurePlate" to="." method="_on_PressurePlate_unpressed"]
+[connection signal="pressed" from="LevelLogic/PressurePlate2" to="." method="_on_PressurePlate2_pressed"]
+[connection signal="unpressed" from="LevelLogic/PressurePlate2" to="." method="_on_PressurePlate2_unpressed"]
+[connection signal="pressed" from="LevelLogic/PressurePlate3" to="." method="_on_PressurePlate3_pressed"]
+[connection signal="unpressed" from="LevelLogic/PressurePlate3" to="." method="_on_PressurePlate3_unpressed"]
+[connection signal="pressed" from="LevelLogic/BoxPressurePlate" to="." method="_on_BoxPressurePlate_pressed"]
+[connection signal="pressed" from="LevelLogic/BoxPressurePlate2" to="." method="_on_BoxPressurePlate2_pressed"]
+[connection signal="unpressed" from="LevelLogic/BoxPressurePlate2" to="." method="_on_BoxPressurePlate2_unpressed"]
+[connection signal="body_entered" from="LevelLogic/LevelCompleteArea" to="." method="_on_LevelCompleteArea_body_entered"]
+[connection signal="retry" from="HUD/PauseMenu" to="." method="_on_PauseMenu_retry"]

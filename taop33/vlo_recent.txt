@@ -1,0 +1,4 @@
+3
+/home/gusha433/git_project/taop33/lab1/prob3.vlp
+/home/gusha433/git_project/taop33/lab1/prob2.vlp
+/home/gusha433/git_project/taop33/lab1/probdual.vlp

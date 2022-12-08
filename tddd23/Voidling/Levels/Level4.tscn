@@ -1,0 +1,172 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Level4.gd" type="Script" id=2]
+[ext_resource path="res://Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UIcomponents/Pause.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 1, 0.901461 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 1, 1.07543 )
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 2.05249, 4.71434, 1.42729 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 4.99756, 1, 4.24287 )
+
+[node name="Level4" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1425, 2.14528, 35.2097 )
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Ground" type="StaticBody" parent="World"]
+transform = Transform( 0.425199, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Ground"]
+transform = Transform( 80.109, 0, 0, 0, 1.00136, 0, 0, 0, 64.9065, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Ground"]
+transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 63.6668, 0, 0, 7.68942 )
+shape = SubResource( 2 )
+
+[node name="Wall1" type="StaticBody" parent="World"]
+transform = Transform( 0.563882, 0, 0, 0, 1, 0, 0, 0, 3.51506, 11.4701, 16.9941, -66.3864 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall1"]
+transform = Transform( 40, 0, 0, 0, 54.1213, 0, 0, 0, 1, 0, 10.8052, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall1"]
+transform = Transform( 40, 0, 0, 0, 32.0579, 0, 0, 0, 1, 0, 24.5325, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall3" type="StaticBody" parent="World"]
+transform = Transform( 0.563882, 0, 0, 0, 1, 0, 0, 0, 15.4026, 11.4701, -12.8608, 3.91617 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall3"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, -0.655718 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall3"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 0.426935, 0, 0, -0.110851 )
+shape = SubResource( 4 )
+
+[node name="Wall4" type="StaticBody" parent="World"]
+transform = Transform( 0.563882, 0, 0, 0, 1.62703, 0, 0, 0, 13.8595, 11.3697, -12.7561, -17.4042 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall4"]
+transform = Transform( 40, 0, 0, 0, 16, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall4"]
+transform = Transform( 40, 0, 0, 0, 15.9999, -0.028991, 0, 0.00639262, 0.999994, 0, 0, -0.0763012 )
+shape = SubResource( 4 )
+
+[node name="Wall5" type="StaticBody" parent="World"]
+transform = Transform( 0.563181, 0, 0, 0, 2.66526, 0, 0, 0, 13.8423, 11.3697, -12.7561, -37.0747 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall5"]
+transform = Transform( 71.6236, 0, 0, 0, 16, 0, 0, 0, 1.62003, -31.5436, 0.105655, -0.778697 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall5"]
+transform = Transform( 40, 0, 0, 0, 16.3788, 0, 0, 0, 1.7158, 0, -0.133968, -1.00182 )
+shape = SubResource( 4 )
+
+[node name="Wall2" type="StaticBody" parent="World"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1.63009, 0, -1.7, 0, -7.43094e-08, -6, 16.9941, 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall2"]
+transform = Transform( 40, 0, -1.42109e-14, 0, 27.8219, 0, 1.36424e-12, 0, 1, -13.9819, 10.7633, -1.43051e-06 )
+mesh = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall2"]
+transform = Transform( 40, 0, -1.42109e-14, 0, 39.7869, 0, 3.41061e-13, 0, 1, -14.0922, 23.0265, -4.76837e-07 )
+shape = SubResource( 6 )
+
+[node name="Wall6" type="StaticBody" parent="World"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1.64086, 0, -1.7, 0, -7.43094e-08, -6, 16.9941, -136.593 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World/Wall6"]
+transform = Transform( 40, 0, -1.42109e-14, 0, 27.8219, 0, 1.13687e-12, 0, 1, -13.7364, 10.7633, -1.43051e-06 )
+mesh = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World/Wall6"]
+transform = Transform( 40, 0, -1.77636e-14, 0, 16, 0, 5.68434e-13, 0, 1, -13.72, 21.4459, -0.317364 )
+shape = SubResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="World"]
+transform = Transform( -0.789756, 0.534476, 0.301034, 0.566061, 0.445906, 0.693356, 0.236349, 0.717985, -0.654703, 22.6294, 5.29881, 0 )
+light_color = Color( 0.368627, 0.298039, 0.658824, 1 )
+light_energy = 3.856
+shadow_enabled = true
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="World"]
+transform = Transform( 0.736754, 0.0403965, 0.674953, -0.539666, 0.636537, 0.550982, -0.407375, -0.770187, 0.490772, 22.6294, 5.29881, 11.4556 )
+light_color = Color( 0.560784, 0.188235, 0.772549, 1 )
+light_energy = 0.927
+shadow_color = Color( 0.560784, 0.188235, 0.772549, 1 )
+
+[node name="LevelLogic" type="Spatial" parent="."]
+
+[node name="Crate" parent="LevelLogic" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07629, 14.0578, -18.6594 )
+
+[node name="LevelCompleteArea" type="Area" parent="LevelLogic"]
+transform = Transform( 1.78968, 0, 0, 0, 1.78968, 0, 0, 0, 1.78968, -14.6617, 37.4301, -40.4719 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="LevelLogic/LevelCompleteArea"]
+transform = Transform( 1.8305, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.65783 )
+shape = SubResource( 7 )
+
+[node name="OpenFinalDoorArea" type="Area" parent="LevelLogic"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.931625, 32.3014, -43.9577 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="LevelLogic/OpenFinalDoorArea"]
+shape = SubResource( 8 )
+
+[node name="ExitDoor" parent="LevelLogic" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59377, 30.1175, -43.2733 )
+
+[node name="FinishLight" type="OmniLight" parent="LevelLogic/ExitDoor"]
+transform = Transform( 1.00171, 0, 0, 0, 0.640213, 0, 0, 0, 1.00171, -5.40183, 8.49757, -0.94643 )
+visible = false
+light_color = Color( 1, 0.592157, 0.117647, 1 )
+light_energy = 3.862
+shadow_enabled = true
+omni_range = 19.009
+
+[node name="FinishLight" type="OmniLight" parent="LevelLogic"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2703, 41.5807, -43.8044 )
+light_color = Color( 1, 0.592157, 0.117647, 1 )
+light_energy = 3.862
+shadow_enabled = true
+omni_range = 19.009
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="PauseMenu" parent="HUD" instance=ExtResource( 5 )]
+
+[connection signal="body_entered" from="LevelLogic/LevelCompleteArea" to="." method="_on_LevelCompleteArea_body_entered"]
+[connection signal="body_entered" from="LevelLogic/OpenFinalDoorArea" to="." method="_on_OpenFinalDoorArea_body_entered"]
+[connection signal="retry" from="HUD/PauseMenu" to="." method="_on_PauseMenu_retry"]

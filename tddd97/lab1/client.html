@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Swag TWIDDER</title>
+  <link href="client.css" type="text/css" rel="stylesheet">
+  <script src="client.js"></script>
+  <script src="serverstub.js"></script>
+  <script id="welcome-view" type="text/view">
+    <div class="container">
+    <img src="wimage.png" alt="login image" class="loginImage"/>
+    <div class="loginSignUp">
+        <form class="loginForm" onsubmit="signIn(); return false;">
+          <div> <span>Email</span>
+            <input type="email" id="email-login" required> </div>
+          <div ><span>Password</span>
+            <input type="password" id="psw-login" required> </div>
+            <div id="login-error" class="error"></div>
+            <input class="loginButton" type="submit" value="Login">
+          </form>
+      <div class="signUp">
+        <h2 class ="signSign">Sign up here </h2>
+          <form class="signUpFormat" onsubmit="signUp(); return false;">
+            <div> <span>First Name</span>
+              <input type="text" id="fname" required> </div>
+            <div > <span>Family name</span>
+              <input type="text" id="fam-name" required> </div>
+            <div > <span>Gender</span>
+              <select id="gender-value" required>
+                <option value="Male">Male</option>
+                <option value="Woman">Woman</option>
+              </select></div>
+              <div> <span>City</span>
+                <input type="text" id="city" required> </div>
+              <div> <span>Country</span>
+                <input type="text" id="country" required> </div>
+              <div> <span>Email</span>
+                <input type="email" id="email-create" required> </div>
+
+              <div > <span>Password</span>
+                <input type="password" id="psw-create" required> </div>
+              <div > <span>Repeat PSW</span>
+                <input type="password" id="psw-again" required> </div>
+             <div id="sign-up-error" class="error"></div>
+             <input class="signUpButton" type="submit" value="Sign up" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script id="profile-view" type="text/view">
+    <div class = "container white">
+    <div class = "tabrow">
+        <button class="tab-button current" onClick="switchTab(event, 'home')">Home</button>
+        <button class="tab-button" onClick="switchTab(event, 'browse')">Browse</button>
+        <button class="tab-button" onClick="switchTab(event, 'account')">Account</button>
+      </div>
+      <div id="home" class="tab-container show"> 
+        <div>
+          <h3> Personal data</h3>
+          <div><span>Name:</span>  <span id ="user-name"></span> </div>
+          <div><span>Family Name: </span> <span id ="user-fam-name"></span></div>
+          <div><span>Gender:</span> <span id ="user-gender"></span></div>
+          <div><span>City: </span> <span id ="user-city"></span></div>
+          <div><span>Country: </span> <span id ="user-country"></span></div>
+          <div> <span>Email: </span> <span id ="user-email"></span></div>
+        </div>
+        <div class="create-post">
+          <h3>Create post</h3>
+          <form onsubmit="post(); return false">
+          <textarea id="user-post" rows="4" cols="50" required style="width:100%"></textarea>
+          <input type="submit" value="Submit">
+          <div id="post-message-error" class="error"></div>
+            <div id="post-message-success" class="success"></div>
+          </form>
+        <button onClick="refreshMessages()">Refresh</button>
+        </div>
+        <div class="wall"  onafterprint="refreshMessages()">
+        <h3>My Wall</h3>
+          <div id="posts"></div>
+        </div>
+      </div>
+
+      <div id="browse" class="tab-container">
+        <div style="width:100%">
+          <h3>Find user</h3>
+          <form onsubmit="browse(); return false;">
+            <input type="submit" value="Submit">
+            <input type="email" id="browse-email" required style="width:50%"> 
+            <div id="browse-error" class="error"></div>
+            <div id="browse-success" class="success"></div>
+          </form>
+        </div>
+        <div id="browse-information" style="display:block" class=""> 
+        <div>
+          <h2 id="browse-header"></h2>
+          <h3> Personal data</h3>
+          <div><span>Name:</span>  <span id ="browse-user-name"></span> </div>
+          <div><span>Family Name: </span> <span id ="browse-user-fam-name"></span></div>
+          <div><span>Gender:</span> <span id ="browse-user-gender"></span></div>
+          <div><span>City: </span> <span id ="browse-user-city"></span></div>
+          <div><span>Country: </span> <span id ="browse-user-country"></span></div>
+          <div> <span>Email: </span> <span id ="browse-user-email"></span></div>
+        </div>
+        <div class="create-post">
+          <h3>Create post</h3>
+          <form onsubmit="browsePost(); return false;">
+          <textarea id="browse-user-post" rows="4" cols="50" required style="width:100%"></textarea>
+          <input type="submit" value="Submit">
+          <div id="browse-post-message-error" class="error"></div>
+            <div id="browse-post-message-success" class="success"></div>
+          </form>
+        <button onClick="refreshBrowseMessages()">Refresh</button>
+        </div>
+        <div class="wall"  onafterprint="getBrowseUserMessages ()">
+        <h3 id="browse-wall-title">My Wall</h3>
+          <div id="browse-posts"></div>
+        </div>
+      </div>
+      </div>
+
+      <div id="account" class="tab-container">
+        <div> 
+          <form onsubmit="changePassword(); return false;">
+            <div> <span>Old password</span>
+            <input type="password" id="old-password" required> </div>
+            <div> <span>New Password</span>
+            <input type="password" id="new-password" required> </div>
+            <div> <span>Repeat new password</span>
+            <input type="password" id="repeat-new-password" required> </div>
+            <div id="change-password-error" class="error"></div>
+            <div id="change-password-success" class="success"></div>
+             <input type="submit" value="Submit">
+          </form>
+          <button onclick="signOut()"> Sign out </button>
+        </div>
+
+      </div>
+
+    </div>
+  </script>
+</head>
+
+<body>
+  <div id="view"></div>
+</body>
+
+
+</html>

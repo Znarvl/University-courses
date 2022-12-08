@@ -1,0 +1,324 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/PressurePlate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/WaveWave.gd" type="Script" id=4]
+[ext_resource path="res://Levels/World2.gd" type="Script" id=5]
+[ext_resource path="res://Levels/Level8.gd" type="Script" id=6]
+[ext_resource path="res://UIcomponents/Pause.tscn" type="PackedScene" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 19.5756, 1, 5.28006 )
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 20.2572, 4.63414, 4.70462 )
+
+[node name="Level8" type="Node"]
+script = ExtResource( 6 )
+
+[node name="Pause" parent="." instance=ExtResource( 7 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00104237, 0.877266, 118.267 )
+
+[node name="World2" type="Spatial" parent="."]
+script = ExtResource( 5 )
+
+[node name="Section1" type="Spatial" parent="World2"]
+
+[node name="TopViewChange" type="Area" parent="World2/Section1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70195, 20.2518, 73.6833 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/TopViewChange"]
+transform = Transform( 1, 0, 0, 0, 2.17857, 0, 0, 0, 1, 0, 0, 2.43507 )
+shape = SubResource( 1 )
+
+[node name="Ground" type="StaticBody" parent="World2/Section1"]
+transform = Transform( 21.8041, 0, 0, 0, 80, 0, 0, 0, 30.25, -0.000534058, -80, 99.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/Ground"]
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/Ground"]
+shape = SubResource( 3 )
+
+[node name="Wall1" type="StaticBody" parent="World2/Section1"]
+transform = Transform( 80, 0, 0, 0, 140, 0, 0, 0, 130, -98, -20, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/Wall1"]
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/Wall1"]
+shape = SubResource( 3 )
+
+[node name="Obstacle1" type="StaticBody" parent="World2/Section1"]
+transform = Transform( 21.8041, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.00558472, 2.5, 102.855 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/Obstacle1"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/Obstacle1"]
+shape = SubResource( 5 )
+
+[node name="Obstacle2" type="StaticBody" parent="World2/Section1"]
+transform = Transform( 21.8041, 0, 0, 0, 5, 0, 0, 0, 4.5, -0.000534058, 5, 95.9078 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/Obstacle2"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/Obstacle2"]
+shape = SubResource( 5 )
+
+[node name="Obstacle3" type="StaticBody" parent="World2/Section1"]
+transform = Transform( 21.804, 0, 0, 0, 10, 0, 0, 0, 11, -0.001, 10, 80.5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/Obstacle3"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/Obstacle3"]
+shape = SubResource( 5 )
+
+[node name="WaveWave" type="Spatial" parent="World2/Section1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+script = ExtResource( 4 )
+
+[node name="Pillar1" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 5, -13, 9.14894, 60.5247 )
+
+[node name="Pillar1Pressure" parent="World2/Section1/WaveWave/Pillar1" instance=ExtResource( 2 )]
+transform = Transform( 0.4, 0, 0, 0, 0.1, 0, 0, 0, 0.4, 0, 1, 0.0499992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Pillar1"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Pillar1"]
+shape = SubResource( 5 )
+
+[node name="Pillar2" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 5, -3, 9.14894, 60.5247 )
+
+[node name="Pillar2Pressure" parent="World2/Section1/WaveWave/Pillar2" instance=ExtResource( 2 )]
+transform = Transform( 0.4, 0, 0, 0, 0.1, 0, 0, 0, 0.4, 0, 1, 0.0499992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Pillar2"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Pillar2"]
+shape = SubResource( 5 )
+
+[node name="Pillar3" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 5, 7, 9.14894, 60.5247 )
+
+[node name="Pillar3Pressure" parent="World2/Section1/WaveWave/Pillar3" instance=ExtResource( 2 )]
+transform = Transform( 0.4, 0, 0, 0, 0.1, 0, 0, 0, 0.4, 0, 1, 0.0499992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Pillar3"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Pillar3"]
+shape = SubResource( 5 )
+
+[node name="Pillar4" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 5, 17, 9.14894, 60.5247 )
+
+[node name="Pillar4Pressure" parent="World2/Section1/WaveWave/Pillar4" instance=ExtResource( 2 )]
+transform = Transform( 0.4, 0, 0, 0, 0.1, 0, 0, 0, 0.4, 0, 1, 0.0499992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Pillar4"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Pillar4"]
+shape = SubResource( 5 )
+
+[node name="Obstacle1" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 11.55, -13, 27.903, 40 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle1"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle1"]
+shape = SubResource( 5 )
+
+[node name="Obstacle2" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -2.02838e-07, 0, -10.7193, 0, 10, 0, 5, 0, -5.04867e-07, 2.64873, 27.5933, 33.4589 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle2"]
+transform = Transform( 1, 0, -7.10543e-15, 0, 1, 0, 1.77636e-15, 0, 1, 0, 0, 0 )
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle2"]
+transform = Transform( 1, 0, -1.42109e-14, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0 )
+shape = SubResource( 5 )
+
+[node name="Obstacle3" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -1.7266e-07, 0, -3.95, 0, 10, 0, 7.67373, 0, -3.3543e-07, 9.40767, 27.5951, 20.8542 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle3"]
+shape = SubResource( 5 )
+
+[node name="Obstacle4" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -5.37962e-07, 0, -12.3071, 0, 10, 0, 4.36426, 0, -1.90768e-07, 10.1516, 28.5377, 1.13143 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle4"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle4"]
+shape = SubResource( 5 )
+
+[node name="Obstacle6" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -5.78973e-07, 0, -13.2454, 0, 10, 0, 4.36426, 0, -1.90768e-07, -4.93155, 28.2722, -15.164 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle6"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle6"]
+shape = SubResource( 5 )
+
+[node name="Obstacle5" type="StaticBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -1.94223e-07, 0, -4.44331, 0, 10, 0, 11.3347, 0, -4.95456e-07, -6.50879, 29.9744, 8.09992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Obstacle5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 3.55271e-15, 0, 1, 0, -0.153196, 0 )
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Obstacle5"]
+shape = SubResource( 5 )
+
+[node name="Wave1" type="KinematicBody" parent="World2/Section1/WaveWave"]
+transform = Transform( -7.00559e-07, 0, 4.3, 0, 1, 0, -44.2345, 0, -7.20671e-06, 1.99998, 17, 15.372 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section1/WaveWave/Wave1"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section1/WaveWave/Wave1"]
+shape = SubResource( 5 )
+
+[node name="TargetRight" type="Spatial" parent="World2/Section1/WaveWave"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 17, 16 )
+
+[node name="TargetLeft" type="Spatial" parent="World2/Section1/WaveWave"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 17, 16 )
+
+[node name="Section2" type="Spatial" parent="World2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14 )
+
+[node name="Ground" type="StaticBody" parent="World2/Section2"]
+transform = Transform( 21.804, 0, 0, 0, 60, 0, 0, 0, 30, -0.000534058, -40.1659, -63.2992 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section2/Ground"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/Ground"]
+shape = SubResource( 5 )
+
+[node name="Ground4" type="StaticBody" parent="World2/Section2"]
+transform = Transform( 21.804, 0, 0, 0, 60, 0, 0, 0, 30, -0.000534058, -40.3831, -114.028 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section2/Ground4"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/Ground4"]
+shape = SubResource( 5 )
+
+[node name="Ground2" type="StaticBody" parent="World2/Section2"]
+transform = Transform( 10, 0, 0, 0, 30, 0, 0, 0, 10, -13.4989, 47.0297, -84.0519 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section2/Ground2"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/Ground2"]
+shape = SubResource( 5 )
+
+[node name="Ground3" type="StaticBody" parent="World2/Section2"]
+transform = Transform( 7, 0, 0, 0, 30, 0, 0, 0, 10, 14.7962, 49.872, -83.9943 )
+
+[node name="MeshInstance" type="MeshInstance" parent="World2/Section2/Ground3"]
+mesh = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/Ground3"]
+shape = SubResource( 5 )
+
+[node name="EndLevel" type="Area" parent="World2/Section2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.7996, -57.5715 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/EndLevel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80604, 0, 3.92783 )
+shape = SubResource( 6 )
+
+[node name="EndLelelele" type="Area" parent="World2/Section2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.7996, -86.7717 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="World2/Section2/EndLelelele"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80604, 0, 3.92783 )
+shape = SubResource( 6 )
+
+[node name="ExitDoor" parent="World2" instance=ExtResource( 3 )]
+transform = Transform( 3.21457, 0, 0, 0, 0.792557, 0, 0, 0, 4.46559, 2.35508, 19.9066, -69.6112 )
+
+[node name="Lights" type="Spatial" parent="World2"]
+
+[node name="SunSetEsk" type="DirectionalLight" parent="World2/Lights"]
+transform = Transform( 0.977329, -0.00772523, -0.211584, 0.122171, 0.836757, 0.533771, 0.172921, -0.54752, 0.818731, 0.0376854, 60.7382, 71.4177 )
+light_color = Color( 0.984314, 0.741176, 0.164706, 1 )
+shadow_enabled = true
+
+[node name="MildPurble" type="DirectionalLight" parent="World2/Lights"]
+transform = Transform( 0.703956, -0.367037, 0.608055, -0.247793, 0.675408, 0.694567, -0.665617, -0.639616, 0.384508, 14.2549, 40.7914, 90.7824 )
+light_color = Color( 0.709804, 0.376471, 0.54902, 1 )
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="OmniLight" type="OmniLight" parent="World2/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.20057, 8.19747, 20.0853 )
+light_color = Color( 0.952941, 0.647059, 0.25098, 1 )
+light_energy = 1.486
+shadow_enabled = true
+omni_range = 30.0
+
+[node name="OmniLight2" type="OmniLight" parent="World2/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.17217, 6.61747, 17.6197 )
+light_color = Color( 0.952941, 0.647059, 0.25098, 1 )
+light_energy = 1.486
+shadow_enabled = true
+omni_range = 30.0
+
+[node name="OmniLight3" type="OmniLight" parent="World2/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18153, 11.5465, 4.24869 )
+light_color = Color( 0.952941, 0.647059, 0.25098, 1 )
+light_energy = 1.486
+shadow_enabled = true
+omni_range = 30.0
+
+[node name="FinishLight" type="OmniLight" parent="World2/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24654, 22.2593, -62.1355 )
+light_color = Color( 1, 0.592157, 0.117647, 1 )
+light_energy = 3.862
+shadow_enabled = true
+omni_range = 19.009
+
+[connection signal="body_entered" from="World2/Section1/TopViewChange" to="World2" method="_on_TopViewChange_body_entered"]
+[connection signal="pressed" from="World2/Section1/WaveWave/Pillar1/Pillar1Pressure" to="World2/Section1/WaveWave" method="_on_Pillar1Pressure_pressed"]
+[connection signal="pressed" from="World2/Section1/WaveWave/Pillar2/Pillar2Pressure" to="World2/Section1/WaveWave" method="_on_Pillar2Pressure_pressed"]
+[connection signal="pressed" from="World2/Section1/WaveWave/Pillar3/Pillar3Pressure" to="World2/Section1/WaveWave" method="_on_Pillar3Pressure_pressed"]
+[connection signal="pressed" from="World2/Section1/WaveWave/Pillar4/Pillar4Pressure" to="World2/Section1/WaveWave" method="_on_Pillar4Pressure_pressed"]
+[connection signal="body_entered" from="World2/Section2/EndLevel" to="." method="_on_EndLevel_body_entered"]
+[connection signal="body_entered" from="World2/Section2/EndLelelele" to="." method="_on_EndLelelele_body_entered"]

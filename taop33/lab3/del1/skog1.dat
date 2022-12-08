@@ -1,0 +1,47 @@
+param: MAT:   pris  maxport :=
+ spenat	      1	       9999999
+ fronGHM      1	       9999999
+ hassel	      1	       9999999
+ jordgubbar   1	       9999999
+ loktrav      1        9999999
+ smultron     1        9999999
+ graslok      1        9999999
+ bjornbar     1        9999999
+ vin          1        9999999
+ barhaggmispe 1        9999999
+ havtorn      1        9999999
+ rosenkvitten 1        9999999
+ sibirisk     1        9999999
+ apple 	      1        9999999 
+ ;
+
+param: BEHOV:  minkrav maxkrav:= 
+ energi        2050    9999999
+ protein       55      9999999
+ fett          80      9999999
+ kolhyd        142     9999999;    
+
+param inneh: spenat fronGHM hassel  jordgubbar loktrav smultron graslok bjornbar vin barhaggmispe havtorn rosenkvitten sibirisk apple :=
+ energi	      44      118   656.1   41.2  69.74  41.2  27.6   44.1  75    85    86.3  63.4  152   47.9
+ protein      2.79    5.32  13      0.49  8.57   0.49  2.80   0.7   0.7   1.33  0.7   0.4   15.1  0
+ fett	      0.75    1.38  62.60   0.21  0.53   0.21  0.6    0.4   0.6   0.49  5.0   0.1   3.32  0.05
+ kolhyd	      6.41    14.3  9.4     8.29  8.19   8.29  1.7    6.5   15.7  19    6.3   13.1  15.0  10.58
+; 
+
+# FÃ¶rklaring:
+# spenat        Spenat
+# fronGHM       FrÃ¶n frÃ¥n Gode Henriks mÃ¥lla
+# hassel	Hassel
+# jordgubbar    Jordgubbar
+# loktrav       LÃ¶ktrav
+# smultron      Smultron
+# graslok       GrÃ¤slÃ¶k
+# bjornbar      BjÃ¶rnbÃ¤r
+# vin           Vin
+# barhaggmispe  BÃ¤rhÃ¤ggmispel
+# havtorn       Havtorn
+# rosenkvitten  Rosenkvitten
+# sibirisk      Sibirisk Ã¤rtbuske
+# apple         Ãpple
+#
+# enhet: 100 gram

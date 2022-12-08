@@ -1,0 +1,9 @@
+8
+/home/gusha433/git_project/taop33/lab2/uppgift_b.net
+/home/gusha433/git_project/taop33/lab2/uppgift_a.net
+/home/gusha433/git_project/taop33/lab2/medkostnad.net
+/home/gusha433/git_project/taop33/lab2/uppgift1.net
+/home/gusha433/git_project/taop33/lab2/uppgift_c.net
+/home/gusha433/git_project/taop33/lab2/utankostnader.net
+/home/gusha433/git_project/taop33/lab2/tomnodlink.net
+/home/gusha433/git_project/taop33/lab2/grundnoder.net
