@@ -1,0 +1,14 @@
+Assignment 2 - Net Ninny report.
+
+Start by setting your browsers HTTP proxy settings to:
+127.0.0.1, port 1234
+
+Start the proxy server in your terminal of choice by running:
+$ python3 server.py
+
+Or
+
+$ python3
+>>> import server.py
+
+Then browse websites on your chosen web browser and be protected from bad words.
