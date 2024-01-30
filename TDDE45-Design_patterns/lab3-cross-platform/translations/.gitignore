@@ -1,0 +1,5 @@
+*.mo
+gettext
+*.qm
+qt-linguist
+Makefile.linguist

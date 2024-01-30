@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>Lab2</artifactId>
+    <groupId>org.simja649.multi</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <packaging>jar</packaging>
+
+  <groupId>org.simja649.multi</groupId>
+  <artifactId>client</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>client</name>
+
+
+  <properties>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+<dependency>
+  <groupId>joda-time</groupId>
+  <artifactId>joda-time</artifactId>
+  <version>2.12.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.14</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.20.0</version>
+</dependency>
+	<dependency>
+					<groupId>org.apache.maven.surefire</groupId>
+					<artifactId>surefire-junit4</artifactId>
+					<version>2.22.0</version>
+				</dependency>
+  </dependencies>
+
+  <build>
+      <plugins>
+      <plugin>
+                <groupId>sample.plugin</groupId>
+                <artifactId>my-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <name>createFilee.txt</name>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>create-file-and-write</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>create-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.22.0</version>
+      <executions>
+          <execution>
+          <phase>integration-test</phase>
+              <goals>
+                  <goal>test</goal>
+              </goals>
+			<configuration>
+				<includes>
+					<include>**/*.java</include>
+				</includes>
+			</configuration>
+        </execution>
+        </executions>
+
+		</plugin>
+
+      </plugins>
+  </build>
+</project>

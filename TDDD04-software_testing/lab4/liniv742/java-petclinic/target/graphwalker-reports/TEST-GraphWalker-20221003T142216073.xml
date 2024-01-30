@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites time="34.075" tests="5" failures="2" errors="1">
+    <testsuite name="GraphWalker" tests="5" failures="2" errors="1" time="34.075" timestamp="2022-10-03T14:22:16">
+        <properties>
+            <property name="classworlds.conf" value="/home/liniv742/.m2/wrapper/dists/apache-maven-3.8.3-bin/5a6n1u8or3307vo2u2jgmkhm0t/apache-maven-3.8.3/bin/m2.conf"/>
+            <property name="env.BASH_ENV" value="/usr/share/modules/init/bash"/>
+            <property name="env.COLORTERM" value="truecolor"/>
+            <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:path=/run/user/1000095871/bus"/>
+            <property name="env.DEFAULTS_PATH" value="/usr/share/gconf/xfce.default.path"/>
+            <property name="env.DESKTOP_SESSION" value="xfce"/>
+            <property name="env.DISPLAY" value=":0.0"/>
+            <property name="env.ENV" value="/usr/share/modules/init/profile.sh"/>
+            <property name="env.GDMSESSION" value="xfce"/>
+            <property name="env.GTK_MODULES" value="appmenu-gtk-module:gail:atk-bridge"/>
+            <property name="env.HOME" value="/home/liniv742"/>
+            <property name="env.JAVA_HOME" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+            <property name="env.KRB5CCNAME" value="FILE:/tmp/krb5cc_1000095871_6xW6Mp"/>
+            <property name="env.LANG" value="en_US.UTF-8"/>
+            <property name="env.LC_ADDRESS" value="sv_SE.UTF-8"/>
+            <property name="env.LC_COLLATE" value="sv_SE.UTF-8"/>
+            <property name="env.LC_CTYPE" value="sv_SE.UTF-8"/>
+            <property name="env.LC_IDENTIFICATION" value="sv_SE.UTF-8"/>
+            <property name="env.LC_MEASUREMENT" value="sv_SE.UTF-8"/>
+            <property name="env.LC_MESSAGES" value="en_GB.UTF-8"/>
+            <property name="env.LC_MONETARY" value="sv_SE.UTF-8"/>
+            <property name="env.LC_NAME" value="sv_SE.UTF-8"/>
+            <property name="env.LC_NUMERIC" value="sv_SE.UTF-8"/>
+            <property name="env.LC_PAPER" value="sv_SE.UTF-8"/>
+            <property name="env.LC_TELEPHONE" value="sv_SE.UTF-8"/>
+            <property name="env.LC_TIME" value="sv_SE.UTF-8"/>
+            <property name="env.LOADEDMODULES" value="null:prog/vscode/1.71.2:prog/maven/3.8.2"/>
+            <property name="env.LOADEDMODULES_modshare" value="prog/vscode/1.71.2:1:prog/maven/3.8.2:1:null:1"/>
+            <property name="env.LOGNAME" value="liniv742"/>
+            <property name="env.LS_COLORS" value="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"/>
+            <property name="env.MANDATORY_PATH" value="/usr/share/gconf/xfce.mandatory.path"/>
+            <property name="env.MANPATH" value="::/opt/puppetlabs/puppet/share/man"/>
+            <property name="env.MAVEN_CMD_LINE_ARGS" value=" graphwalker:test"/>
+            <property name="env.MAVEN_PROJECTBASEDIR" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic"/>
+            <property name="env.MODULEPATH" value="/etc/environment-modules/modules:/usr/share/modules/versions:/usr/share/modules/$MODULE_VERSION/modulefiles:/usr/share/modules/modulefiles"/>
+            <property name="env.MODULEPATH_modshare" value="/etc/environment-modules/modules:1:/usr/share/modules/$MODULE_VERSION/modulefiles:1:/usr/share/modules/modulefiles:1:/usr/share/modules/versions:1"/>
+            <property name="env.MODULESHOME" value="/usr/share/modules"/>
+            <property name="env.MODULES_CMD" value="/usr/lib/x86_64-linux-gnu/modulecmd.tcl"/>
+            <property name="env.OLDPWD" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic"/>
+            <property name="env.PATH" value="/opt/liu/maven/3.8.2/bin:/opt/liu/vscode/1.71.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin"/>
+            <property name="env.PATH_modshare" value="/usr/bin:1:/usr/local/bin:1:/opt/liu/vscode/1.71.2/bin:1:/bin:1:/opt/puppetlabs/bin:1:/snap/bin:1:/opt/liu/maven/3.8.2/bin:1:/sbin:1:/usr/sbin:1:/usr/games:1:/usr/local/sbin:1:/usr/local/games:1"/>
+            <property name="env.PWD" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic"/>
+            <property name="env.QT_ACCESSIBILITY" value="1"/>
+            <property name="env.SESSION_MANAGER" value="local/su17-118:@/tmp/.ICE-unix/806391,unix/su17-118:/tmp/.ICE-unix/806391"/>
+            <property name="env.SHELL" value="/bin/bash"/>
+            <property name="env.SHLVL" value="1"/>
+            <property name="env.SSH_AGENT_PID" value="806466"/>
+            <property name="env.SSH_AUTH_SOCK" value="/tmp/ssh-R51xgG4bxGTY/agent.806391"/>
+            <property name="env.TERM" value="xterm-256color"/>
+            <property name="env.UBUNTU_MENUPROXY" value="1"/>
+            <property name="env.USER" value="liniv742"/>
+            <property name="env.VSCODE" value="/opt/liu/vscode/1.71.2"/>
+            <property name="env.VTE_VERSION" value="6003"/>
+            <property name="env.WINDOWID" value="56623107"/>
+            <property name="env.XAUTHORITY" value="/home/liniv742/.Xauthority"/>
+            <property name="env.XDG_CONFIG_DIRS" value="/etc/xdg/xdg-xfce:/etc/xdg:/etc/xdg"/>
+            <property name="env.XDG_CURRENT_DESKTOP" value="XFCE"/>
+            <property name="env.XDG_DATA_DIRS" value="/usr/share/xfce4:/usr/share/xfce:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share"/>
+            <property name="env.XDG_GREETER_DATA_DIR" value="/var/lib/lightdm-data/liniv742"/>
+            <property name="env.XDG_MENU_PREFIX" value="xfce-"/>
+            <property name="env.XDG_RUNTIME_DIR" value="/run/user/1000095871"/>
+            <property name="env.XDG_SEAT" value="seat0"/>
+            <property name="env.XDG_SEAT_PATH" value="/org/freedesktop/DisplayManager/Seat0"/>
+            <property name="env.XDG_SESSION_CLASS" value="user"/>
+            <property name="env.XDG_SESSION_DESKTOP" value="xfce"/>
+            <property name="env.XDG_SESSION_ID" value="c2"/>
+            <property name="env.XDG_SESSION_PATH" value="/org/freedesktop/DisplayManager/Session0"/>
+            <property name="env.XDG_SESSION_TYPE" value="x11"/>
+            <property name="env.XDG_VTNR" value="7"/>
+            <property name="env._" value="./mvnw"/>
+            <property name="env._LMFILES_" value="/usr/share/modules/modulefiles/null:/etc/environment-modules/modules/prog/vscode/1.71.2:/etc/environment-modules/modules/prog/maven/3.8.2"/>
+            <property name="env._LMFILES__modshare" value="/usr/share/modules/modulefiles/null:1:/etc/environment-modules/modules/prog/vscode/1.71.2:1:/etc/environment-modules/modules/prog/maven/3.8.2:1"/>
+            <property name="file.encoding" value="UTF-8"/>
+            <property name="file.separator" value="/"/>
+            <property name="java.class.path" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic/.mvn/wrapper/maven-wrapper.jar"/>
+            <property name="java.class.version" value="61.0"/>
+            <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+            <property name="java.io.tmpdir" value="/tmp"/>
+            <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+            <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+            <property name="java.runtime.version" value="17.0.4+8-Ubuntu-120.04"/>
+            <property name="java.specification.name" value="Java Platform API Specification"/>
+            <property name="java.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.specification.version" value="17"/>
+            <property name="java.vendor" value="Private Build"/>
+            <property name="java.vendor.url" value="Unknown"/>
+            <property name="java.vendor.url.bug" value="Unknown"/>
+            <property name="java.version" value="17.0.4"/>
+            <property name="java.version.date" value="2022-07-19"/>
+            <property name="java.vm.compressedOopsMode" value="Zero based"/>
+            <property name="java.vm.info" value="mixed mode, sharing"/>
+            <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+            <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+            <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.vm.specification.version" value="17"/>
+            <property name="java.vm.vendor" value="Private Build"/>
+            <property name="java.vm.version" value="17.0.4+8-Ubuntu-120.04"/>
+            <property name="jdk.debug" value="release"/>
+            <property name="line.separator" value="&#10;"/>
+            <property name="maven.build.version" value="Apache Maven 3.8.3 (ff8e977a158738155dc465c6a97ffaf31982d739)"/>
+            <property name="maven.conf" value="/home/liniv742/.m2/wrapper/dists/apache-maven-3.8.3-bin/5a6n1u8or3307vo2u2jgmkhm0t/apache-maven-3.8.3/conf"/>
+            <property name="maven.home" value="/home/liniv742/.m2/wrapper/dists/apache-maven-3.8.3-bin/5a6n1u8or3307vo2u2jgmkhm0t/apache-maven-3.8.3"/>
+            <property name="maven.multiModuleProjectDirectory" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic"/>
+            <property name="maven.version" value="3.8.3"/>
+            <property name="native.encoding" value="UTF-8"/>
+            <property name="os.arch" value="amd64"/>
+            <property name="os.name" value="Linux"/>
+            <property name="os.version" value="5.4.0-126-generic"/>
+            <property name="path.separator" value=":"/>
+            <property name="sun.arch.data.model" value="64"/>
+            <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+            <property name="sun.cpu.endian" value="little"/>
+            <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+            <property name="sun.java.command" value="org.apache.maven.wrapper.MavenWrapperMain graphwalker:test"/>
+            <property name="sun.java.launcher" value="SUN_STANDARD"/>
+            <property name="sun.jnu.encoding" value="UTF-8"/>
+            <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+            <property name="sun.stderr.encoding" value="UTF-8"/>
+            <property name="sun.stdout.encoding" value="UTF-8"/>
+            <property name="user.country" value="GB"/>
+            <property name="user.country.format" value="SE"/>
+            <property name="user.dir" value="/home/liniv742/Desktop/TDDD04/graphwalker-example/java-petclinic"/>
+            <property name="user.home" value="/home/liniv742"/>
+            <property name="user.language" value="en"/>
+            <property name="user.language.format" value="sv"/>
+            <property name="user.name" value="liniv742"/>
+        </properties>
+        <testcase name="NewOwnerTest" time="6.815" classname="com.company.modelimplementations.NewOwnerTest">
+            <error type="java.lang.reflect.InvocationTargetException">
+                java.lang.reflect.InvocationTargetException
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                	at org.graphwalker.core.machine.ExecutionContext.execute(ExecutionContext.java:265)
+                	at org.graphwalker.core.machine.SimpleMachine.execute(SimpleMachine.java:285)
+                	at org.graphwalker.core.machine.SimpleMachine.getNextStep(SimpleMachine.java:108)
+                	at org.graphwalker.java.test.TestExecutor.execute(TestExecutor.java:249)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                	at org.graphwalker.java.test.Reflections.invoke(Reflections.java:73)
+                	at org.graphwalker.java.test.Reflector.execute(Reflector.java:123)
+                	at org.graphwalker.maven.plugin.TestMojo.execute(TestMojo.java:161)
+                	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+                	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+                	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+                	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+                	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+                	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+                	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+                	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+                	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+                	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+                	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+                	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+                	at org.apache.maven.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:39)
+                	at org.apache.maven.wrapper.WrapperExecutor.execute(WrapperExecutor.java:122)
+                	at org.apache.maven.wrapper.MavenWrapperMain.main(MavenWrapperMain.java:61)
+                Caused by: java.lang.AssertionError
+                	at org.junit.Assert.fail(Assert.java:87)
+                	at org.junit.Assert.assertTrue(Assert.java:42)
+                	at org.junit.Assert.assertTrue(Assert.java:53)
+                	at com.company.modelimplementations.NewOwnerTest.e_CorrectData(NewOwnerTest.java:30)
+                	... 44 more
+</error>
+        </testcase>
+        <testcase name="PetClinicTest" time="6.815" classname="com.company.modelimplementations.PetClinicTest">
+            <failure type="Not fulfilled" message="86"/>
+        </testcase>
+        <testcase name="FindOwnersTest" time="6.815" classname="com.company.modelimplementations.FindOwnersTest"/>
+        <testcase name="VeterinariansTest" time="6.815" classname="com.company.modelimplementations.VeterinariansTest"/>
+        <testcase name="OwnerInformationTest" time="6.815" classname="com.company.modelimplementations.OwnerInformationTest">
+            <failure type="Not fulfilled" message="0"/>
+        </testcase>
+    </testsuite>
+</testsuites>

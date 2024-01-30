@@ -1,0 +1,24 @@
+# Problems LAB1 
+
+## Problem 1
+(F f) =   ¬f U f eller true U f
+(G f) =   ¬(true U ¬f)
+(A f) =   ¬E ¬f
+(f R g) = (¬f ∧ g) U (f ∧ g) v ¬(true U ¬(¬f ∧ g))
+
+
+## Problem 2
+
+
+see pictures in map "pictures_question_2"
+
+## Problem 3
+### 1.
+Give an infinite word on {En, Ex} that violates the formula
+1. (En ∧ ¬Ex) ... uppfylld upp till omega
+2. (En ∧ ¬Ex) ... uppfylld upp till omega
+### 2.
+1. FG (En ∧ ¬Ex)
+2. ¬(GF(En) => GF(Ex)) = ¬(¬GF(En) v GF(Ex)) = (GF(En) ∧ ¬GF(Ex)) = (GF(En) ∧ EG(¬Ex))  
+
+see pictures in map pictures_question_3

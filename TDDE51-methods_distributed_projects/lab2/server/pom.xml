@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>Lab2</artifactId>
+    <groupId>org.simja649.multi</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>org.simja649.multi</groupId>
+  <artifactId>server</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>mvn-golang</packaging>
+  
+  <name>server</name>
+
+  <properties>
+    <mvn.golang.go.version>1.18.3</mvn.golang.go.version>
+    <mvn.golang.get.packages.file>${basedir}${file.separator}packages.txt</mvn.golang.get.packages.file>
+    <go.wrapper.plugin.version>2.3.10</go.wrapper.plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+    <mvn.version>3.0</mvn.version>
+  </properties>
+
+  <inceptionYear>2023</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <prerequisites>
+    <maven>${mvn.version}</maven>
+  </prerequisites>
+
+  <build>
+    <defaultGoal>clean package</defaultGoal>
+    <finalName>${project.artifactId}-${maven.build.timestamp}${final.extension}</finalName>
+    <sourceDirectory>${basedir}${file.separator}src</sourceDirectory>
+    <directory>${basedir}${file.separator}bin</directory>
+    <resources>
+      <resource>
+        <directory>${basedir}${file.separator}res</directory>
+      </resource>
+    </resources>
+    <plugins>
+
+      <plugin>
+        <groupId>com.igormaznitsa</groupId>
+        <artifactId>mvn-golang-wrapper</artifactId>
+        <version>${go.wrapper.plugin.version}</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+          <id>default-build</id>
+          <goals>
+            <goal>build</goal>
+          </goals>
+            <configuration>
+              <packages>
+                <package>todo.go</package>
+              </packages>
+              <resultName>binary</resultName>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>default-get</id>
+            <configuration>
+              <buildFlags>
+                <flag>-u</flag>
+              </buildFlags>
+              <packages>
+              <package>github.com/lib/pq</package>
+              <package>github.com/lib/pq</package>
+              </packages>
+            </configuration>
+          </execution>
+
+          <execution>
+          <id>default-test</id>
+          <configuration>
+            <buildFlags>
+              <flag>-v</flag>
+            </buildFlags>
+          </configuration>
+          </execution>
+          
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+          <id>start-server</id>
+            <phase>pre-integration-test</phase>
+            <configuration>
+              <target>
+              <exec executable="${project.basedir}/bin/binary"
+              spawn="true" dir="${project.basedir}/bin/">
+              </exec>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          
+          <execution>
+            <id>server integration</id>
+            <phase>integration-test</phase>
+            <configuration>
+              <target>
+              
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>stop-server</id>
+            <phase>post-integration-test</phase>
+            <configuration>
+              <target>
+              <exec executable="pkill">
+              <arg line="-9 binary" />
+              </exec>
+              <echo message="Kill server"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

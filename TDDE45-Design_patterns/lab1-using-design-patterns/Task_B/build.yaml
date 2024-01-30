@@ -1,0 +1,43 @@
+!domain.BuildConfig
+project: 
+ description: "\n        simple example build file\n    "
+ properties: 
+  - 
+   !domain.Property
+   name: src
+   location: src
+  - 
+   !domain.Property
+   name: build
+   location: build
+  - 
+   !domain.Property
+   name: dist
+   location: dist
+ 
+ targets: 
+  - &init
+   !domain.Target
+   name: init
+   
+  - &compile
+   !domain.Target
+   name: compile
+   description: "compile the source "
+   depends:
+     - *init
+
+  - &dist
+   !domain.Target
+   name: dist
+   description: "generate the distribution"
+   depends:
+     - *compile
+
+  - &clean
+   !domain.Target
+   name: clean
+   description: "clean up"
+   
+ name: MyProject
+ basedir: "."

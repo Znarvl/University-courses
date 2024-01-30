@@ -1,0 +1,13 @@
+Student;Grade;Extra;
+"Anders";U;U;
+"Anna";U;U;
+"Bengt";U;15;
+"Birgitta";U;U;
+"Carl";3;U;
+"Christina";3;U;
+"Daniel";4;10;
+"Diana";4;U;
+"Elisabeth";5;20;
+"Erik";5;15;
+"Fredrik";5;20;
+"Frida";5;19;

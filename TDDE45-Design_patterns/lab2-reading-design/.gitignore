@@ -1,0 +1,15 @@
+*.settings
+*.idea
+semantic.cache*
+*~
+nbproject
+FreeCol.log
+FreeCol*.jar
+src/MANIFEST.MF
+bin/
+build/
+doc/specification_*.html
+dist/
+a/
+b/
+TESTS-TestSuites.xml

@@ -1,0 +1,45 @@
+image: golang:latest
+stages:
+  - build
+  - test
+  - run
+
+before_script:
+  - echo 'Before script installing depedencies'
+  - apt-get update -q -y
+  - apt-get install -y sqlite3
+  - go get
+  - sqlite3 foo.db < schema.sql
+
+
+build-go:
+  stage: build
+  script:
+    - echo "Creating folder for go binaries"
+    - mkdir -p mybinaries
+    - go build -o mybinaries todo.go
+  artifacts:
+      paths:
+        - mybinaries
+
+test-go:
+  stage: test
+  script:
+    - echo "Go Test"
+    - go test
+  
+run-go:
+  stage: run
+  before_script:
+    - echo "Setting timeout 5 seconds"
+  script: 
+    - ls -l mybinaries
+    - timeout 5s mybinaries/todo
+  after_script:
+    - echo "Timeout completed"
+  allow_failure:
+    exit_codes: 1
+
+
+
+

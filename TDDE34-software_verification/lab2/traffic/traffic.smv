@@ -1,0 +1,81 @@
+-- Simja649, Robbo301
+
+MODULE main
+VAR    
+    north_lock : boolean; 
+    east_lock : boolean;
+    north_wants : boolean;
+    east_wants : boolean;
+    turn : boolean;
+
+    north: process controller(north_lock, east_lock,  north_wants, east_wants,  turn, FALSE); 
+    east : process controller(east_lock,  north_lock, east_wants,  north_wants, turn, TRUE );
+
+ASSIGN
+    init(north_lock)   := FALSE;
+    init(east_lock)    := FALSE;
+    init(north_wants)  := FALSE;
+    init(east_wants)   := FALSE;
+    init(turn)         := FALSE;
+SPEC AG ! (north.light & east.light)                 -- North and east mutex
+SPEC AG (north.sensor -> AF north.light)             -- North liveliness
+SPEC AG (east.sensor  -> AF east.light)              -- East liveliness
+SPEC AG ((AG !north.sensor) -> AF (AG !north.light)) -- If bike stop showing up, rest of all lighs will be red
+SPEC AG ((AG !east.sensor) -> AF (AG !east.light))   -- If bike stop showing up, rest of all lighs will be red
+
+MODULE controller(this_lock, other_lock, wants, other_wants, turn, id)
+VAR
+    state  : {idle, critical, entering, exiting};
+    light : boolean;
+    sensor : boolean;
+    req    : boolean;
+
+ASSIGN
+init(state)    := idle;
+init(light)    := FALSE;
+init(sensor)   := FALSE;
+init(req)      := FALSE;
+
+next(state) :=
+    case
+        state = idle & req : entering; 
+        state = entering & this_lock : critical;      -- Turn on green light
+        state = critical & light : exiting;           -- Bikes are crossing the road
+        state = exiting & !light & !this_lock : idle; -- Bikes have crossed the road, idle
+        TRUE : state;
+    esac;
+next(wants) :=
+    case
+        state = entering : TRUE;
+        state = exiting : FALSE;
+        TRUE : wants;
+    esac;
+next(this_lock) :=
+    case
+        state = entering & !other_lock & !other_wants : TRUE;            -- If alone with letting bikes over, go
+        state = entering & !other_lock & other_wants & turn = id : TRUE; -- If other road wants to let bikes over but our turn, ignore other road and go
+        state = exiting & this_lock : FALSE;
+ 
+        TRUE : this_lock;
+    esac;
+next(light) :=
+    case
+        state = critical : TRUE;
+        state = exiting : FALSE;
+        TRUE : light;
+    esac;
+next(req) :=
+    case
+        sensor : TRUE;
+        light & !sensor : FALSE;
+        TRUE : req;
+    esac;
+next(turn) :=
+    case
+        state = exiting : !id;  -- If we are exiting, change our id to false
+        TRUE : turn;
+    esac;
+next(sensor) := {TRUE, FALSE};
+    
+FAIRNESS
+    running & !(sensor)
