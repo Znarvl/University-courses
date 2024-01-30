@@ -1,0 +1,71 @@
+Question 1: What is the min and max value of baboon?
+Answer:
+min: 2.0
+max: 207.0
+
+Question 2: What index value do you get between the baboons eyes?
+Original: 66
+Contrast: 66
+
+Question 3: What's the difference in the scales?
+The gray_vals scale goes from 0 to 1 instead of 0 to 255.
+
+Question 4: How does gray_vals affect the picture?
+It changes all pixels with a grayscale value of 200 or above to red.
+
+Question 5: Which colour does the nose get?
+It becomes blue.
+
+Question 6: What happens noisereduction?
+The image gets more blurred.
+
+Question 7: What does same do?
+It throws the extra values you get when you make a full convolution.
+
+Question 8: How does 16 relate?
+It the value you get from adding all the kofficenter.
+If you lower the normalisation factor you get less convolution.
+
+Question 9: What happens whn you use aver again?
+You convulate the image again, and it gets more blurry.
+
+Question 10: Why does it go from withe to black?
+We don't know and would like o know why.
+
+Question 11:
+pythagoras sats på derivatorna
+
+Question 12:
+[1][-1] * [1][-1] = [1][-2][1]
+
+[1] * [1] = [1]
+[-1]  [-1]  [-2]
+	    [1]
+
+Question 13:
+Ask assistance.
+
+Question 14:
+Där det inte är förändring så ligger laplace-filtret runt 0 och 
+där det är mycket förändring så hoppar den mellan -100 och 100.
+Med aroiginalbilden har relativt jämnt med förändringarna över
+hela bilden.
+
+Question 15:
+Istället för accentuera kanterna och så de blir tydligare
+så blurrar den kanterna.
+
+Question 16:
+Den nedsamplade har hälften så många pixlar och blir inte lika tydlig
+den har även ett felaktigt mönster eftersom vissa pixlar hoppas över.
+
+Question 17:
+Det behövs 4 och respektive 8 lågpass upprepningar för att göra artefakter osynliga. FRÅGA LABBASS:
+Vi tror att med frekvent lågpass filtrering så får vi igenom mer och mer låga frekvenser som stabiliserar bilden 
+med kostnaden att den blir "suddig"
+
+Question18:
+Du gör om allt till imgainärt (genom att ffta och sedan invertera fft). ordningen flyttas lika som högra
+
+Question 19:
+För att de blir imaginära belopp, och abs/real inte visar imaginära tal.

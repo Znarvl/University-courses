@@ -1,0 +1,105 @@
+Question1:
+Green:  lo, hi, lo
+Blue:   lo, lo, hi
+Yellow: hi, hi, lo
+Cyan:   lo, hi, hi
+Magneta:hi, lo, hi
+White:  hi, hi, hi
+Black;  lo, lo, lo
+
+Question2:
+figure2 (y)
+
+Question3:
+x = 8
+
+Question4:
+vi downsamplar med 2 och 3 bitar, när vi downsamplar med 2 så får vi ca. 40 i psnr och med 3 bitar cd. 35 psnr
+(x=4 och x=8, image1)
+
+Question5: *fixa i zoom*
+"half-good"
+bpp = 5
+psnr = 34
+
+"good"
+bpp = 7
+psnr = 40
+
+Quetion 6:
+Detaljerna har minst skillnad medans resten har större errors, typ all bakgrund
+
+Question7:
+-9437.0 and 68923.0
+
+Question8:
+psnr = 31
+bpp = 1.125
+
+Question9:
+FFT använder sig av en imaginär del (kan ha en imaginär del) medan DCT kan bara vara reellt.
+
+Question10:
+Eftersom DCT bara använder reella tal så använder den mycket mindre minne.
+Slipper "sträcket" (kantbehandling). (enklare att kvantisera)
+
+Question 11:
+3.637978807091713e-12
+
+Question 12:
+5.968558980384842e-13
+
+Question 13:
+max = 1880.0
+min = -470.0
+bpc = 12
+
+Question 14:
+PSNR = 30
+bpp = 0.75
+
+Question 15:
+PSNR = 32.684623950013496
+bpp = 1.69
+
+Question 16:
+"half good"
+psnr = 34.6
+Q1 = 50
+"good"
+psnr = 38.2
+Q1 = 25
+
+Question 17:
+16, 12 
+11, 12
+...
+120, 103
+101, 99
+
+Question 18:
+höga frekvenser kvantiseras mer (vi vill bli av med höga så samlar upp de låga i ett hörn med zig-zag)
+Enligt JPEG-standarden är låga värden mer värda än höga
+
+Question 19:
+Mean = 57.625
+Medelvärdet av matrisen?
+
+Questoin20:
+"half good"
+Q2 = 2.8
+Q2*JPEGMEAN = 161.35
+PSNR = 34.78608299992914
+"good"
+Q2 = 1.4
+Q2*JPEGMEAN = 80.675
+PSNR = 37.38191003984558
+
+Question 21:
+Dela Q2*JPEG med Q1 (Hur många fler kan vi kvantisera med Q2)
+Bra vid Q2 = 0.8
+psnr = 39
+
+Question 23:
+It becomes more efficient since similar values are sorted closer to each other.
+
